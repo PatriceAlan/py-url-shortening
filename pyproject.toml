@@ -6,5 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "flask>=3.1.2",
+    "pyshorteners>=1.0.1",
+    "ruff>=0.14.7",
     "uvicorn>=0.38.0",
 ]
