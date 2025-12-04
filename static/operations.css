@@ -46,7 +46,8 @@ label {
 }
 
 input[type="url"],
-input[name="generated_url"] {
+input[name="generated_url"],
+input[name="original_url"] {
     width: 100%;
     padding: 16px 20px;
     border: 2px solid #e2e8f0;
@@ -65,7 +66,8 @@ input[type="url"]:focus {
     box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
 }
 
-input[name="generated_url"] {
+input[name="generated_url"], 
+input[name="original_url"] {
     background: #edf2f7;
     color: #2d3748;
     font-weight: 500;
