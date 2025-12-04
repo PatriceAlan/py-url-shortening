@@ -4,20 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener Service</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 </head>
 <body>
-    <h1>URL Shortener Service</h1>
-    <h2>List of operations</h2>
+    <div class="container">
+        <div class="header">
+            <h1>🔗 URL Shortener</h1>
+            <p>Manage your short links efficiently</p>
+        </div>
 
-    <ul>
-        <li><a href="/create_url" target="_blank">Create a short URL</a></li>
-        <li><a href="/retrieve_url" target="_blank">Retrieve an original URL</a></li>
-        <li>Update an existing shortened URL</li>
-        <li>Get the statistics of a shortened URL</li>
-    </ul>
+        <div class="operations-grid">
+            <div class="operation-card">
+                <div class="icon-wrapper">
+                    <span class="icon">➕</span>
+                </div>
+                <h3>Create a short link</h3>
+                <p>Turn your long URLs into short, easily shareable links</p>
+                <button class="try-button" onclick="window.location.href='/create_url'">Create</button>
+            </div>
 
-    
+            <div class="operation-card">
+                <div class="icon-wrapper">
+                    <span class="icon">🔍</span>
+                </div>
+                <h3>Retrieve a URL</h3>
+                <p>Find the original URL from your short link</p>
+                <button class="try-button" onclick="window.location.href='/retrieve_url'">Retrieve</button>
+            </div>
+
+            <div class="operation-card">
+                <div class="icon-wrapper">
+                    <span class="icon">✏️</span>
+                </div>
+                <h3>Change a URL</h3>
+                <p>Update the destination URL of your existing links</p>
+                <button class="try-button" onclick="window.location.href='/update_url'">Change</button>
+            </div>
+
+            <div class="operation-card">
+                <div class="icon-wrapper">
+                    <span class="icon">🗑️</span>
+                </div>
+                <h3>Delete a link</h3>
+                <p>Permanently delete a short link from your database</p>
+                <button class="try-button" onclick="window.location.href='/delete_url'">Delete</button>
+            </div>
+
+            <div class="operation-card">
+                <div class="icon-wrapper">
+                    <span class="icon">📊</span>
+                </div>
+                <h3>Statistics</h3>
+                <p>Check the performance and clicks of your short links</p>
+                <button class="try-button" onclick="window.location.href='/stats_url'">See stats</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retrieve Original URL</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='operations.css') }}">
 </head>
 <body>
-    <h1>Retrieve Original URL</h1>
+    <h1>🔍 Retrieve Original URL</h1>
     <form action="/retrieve_url" method="post">
         <label for="short_url">Enter your short URL:</label>
         <input type="url" 
@@ -24,7 +24,10 @@
             <a href="{{ original_url }}" target="_blank">Open original URL</a>
         {% elif error %}
             <p>{{ error }}</p>
-        {% endif %}        
+        {% endif %}
+        <div class="form-footer">
+            <a href="/" class="back-home">Back home</a>
+        </div>      
     </form>
 
 </body>

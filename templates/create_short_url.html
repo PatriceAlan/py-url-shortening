@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='operations.css') }}">
 </head>
 <body>
-    <h1>URL Shortener</h1>
+    <h1>➕ Create a short link</h1>
     <form method="post" action="/create_url">
         <label for="url">Enter an https:// URL:</label>
         <input type="url"
@@ -25,7 +25,8 @@
         {% if new_url %}
             <a href="{{ new_url }}" target="_blank">Open shortened URL</a>
         {% endif %}
-
+        <div class="form-footer">
+            <a href="/" class="back-home">Back home</a>
+        </div>
     </form>
-</body>
 </html>

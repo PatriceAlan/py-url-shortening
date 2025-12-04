@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, redirect
 from flask_hot_reload import HotReload
+from flask_bootstrap import Bootstrap
 import string
 import random
 
 app = Flask(__name__)
 HotReload(app)
+bootstrap = Bootstrap(app)
 
 shortened_urls = {}
 
