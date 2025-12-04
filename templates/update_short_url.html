@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Existing URL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='operations.css') }}">
+</head>
+<body>
+    <h1>✏️ Update Existing URL</h1>
+    <form action="/update_url" method="post">
+        <input type="url"
+        id="url"
+        name="short_url"
+        placeholder="http://localhost:5000/abc123"
+        required
+        >
+        <button type="submit">Update</button>
+        <label>Updated URL: </label>
+        <input name="updated_url" value="{{ updated_url }}" readonly>
+
+        {% if updated_url %}
+            <a href="{{ updated_url }}" target="_blank">Open updated URL</a>
+        {% elif error %}
+            <p>{{ error }}</p>
+        {% endif %}
+        <div class="form-footer">
+            <a href="/" class="back-home">Back home</a>
+        </div>
+    </form>
+    
+</body>
+</html>

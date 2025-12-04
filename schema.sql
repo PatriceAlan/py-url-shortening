@@ -14,6 +14,6 @@ AFTER UPDATE ON url
 FOR EACH ROW
 BEGIN
     UPDATE url
-    SET updated = CURRENT_TIMESTAMP
+    SET updated_at = CURRENT_TIMESTAMP
     WHERE id = OLD.id;
 END;
